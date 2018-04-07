@@ -5,24 +5,24 @@ from mcpi.minecraft import Minecraft
 
 def isFill(pt1,pt2,pt3,pt4,pt5,pt6):
     if pt1 > 0:
-		return False
+        return False
+
+    if pt2 > 0:
+        return False
+
+    if pt3 > 0:
+        return False
 	
-	if pt2 > 0:
-		return False
+    if pt4 > 0:
+        return False
 
-	if pt3 > 0:
-		return False
-	
-	if pt4 > 0:
-		return False
+    if pt5 > 0:
+        return False
 
-	if pt5 > 0:
-		return False
+    if pt6 > 0:
+        return False
 
-	if pt6 > 0:
-		return False
-
-	return True
+    return True
 
 
 def fun1(x,y,z):
@@ -50,20 +50,20 @@ for l in range(0,size):
             y = (omax-omin)*float(m)/size+omin
             z = (omax-omin)*float(l)/size+omin
             #print('%e,%e,%e' % (x,y,z))
- 	    p1=fun1(x,y,z)
+            p1=fun1(x,y,z)
             p2=fun1(x+step,y,z)
             p3=fun1(x-step,y,z)
             p4=fun1(x,y+step,z)	
-	    p5=fun1(x,y-step,z)
+            p5=fun1(x,y-step,z)
             p6=fun1(x,y,z+step)
             p7=fun1(x,y,z-step)
 	    
             if ((not isFill(p2,p3,p4,p5,p6,p7)) and p1<=0):
                 #print('%d,%d,%d' % (n,m,l))
-		if z>-3:
-		      mc.setBlock(px+n,py+l,pz+m,wool,15)
-		else:
-	  	      mc.setBlock(px+n,py+l,pz+m,wool,12)
+                if z>-3:
+                    mc.setBlock(px+n,py+l,pz+m,wool,15)
+                else:
+                    mc.setBlock(px+n,py+l,pz+m,wool,12)
 
 mc.postToChat("Takenoko done!")                
 print('end')

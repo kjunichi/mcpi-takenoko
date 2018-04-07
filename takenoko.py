@@ -27,7 +27,7 @@ def isFill(pt1,pt2,pt3,pt4,pt5,pt6):
 
 def fun1(x,y,z):
     # pythonは戻り値にreturnが必要な模様
-    #return x**2+y**2+z**2-1
+    # this formual is related to https://twitter.com/tompng/status/974333032495640576
     return 2*z+math.exp(-z-4)+math.exp(-8*z-48)-8+math.sqrt(1/8+math.pow(x,2)+math.pow(y,2)+2*math.pow(math.pow(x,2)+math.pow(y,2),2))-(1/(1+math.exp(-16*z-72)))*max(1/(1+math.exp(8*(z+x)))+1.0/(1+math.exp(8*(z+x+3)))+1/2,1/(1+math.exp(8*(z-x)))+1.0/(1+math.exp(8*(z-x+3)))) 
 
 print("start")

@@ -5,5 +5,5 @@
 # Usage
 
 ```bash
-python takenoko.py
+python3 takenoko.py
 ```
